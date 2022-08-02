@@ -1,8 +1,6 @@
 <x-guest-layout>
     <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
+
 
         <div x-data="{ recovery: false }">
             <div class="mb-4 text-sm text-gray-600" x-show="! recovery">
@@ -14,6 +12,10 @@
             </div>
 
             <x-jet-validation-errors class="mb-4" />
+            <div class="grid place-content-center">
+
+                <img src="{{asset('avatar.png')}}" class="w-32 place-content-center" alt="">
+            </div>
 
             <form method="POST" action="{{ route('two-factor.login') }}">
                 @csrf

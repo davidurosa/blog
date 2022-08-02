@@ -1,8 +1,6 @@
-<x-guest-layout>
+<x-guest-layout >
     <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
+
 
         <x-jet-validation-errors class="mb-4" />
 
@@ -11,10 +9,13 @@
                 {{ session('status') }}
             </div>
         @endif
+            <div class="grid  place-content-center">
+
+                <img src="{{asset('avatar.png')}}" class="w-32 place-content-center" alt="">
+            </div>
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-
             <div>
                 <x-jet-label for="email" value="{{ __('Email') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
@@ -28,7 +29,7 @@
             <div class="block mt-4">
                 <label for="remember_me" class="flex items-center">
                     <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    <span class="ml-2 text-sm text-gray-600">{{ __('Recuerdame') }}</span>
                 </label>
             </div>
 
@@ -39,7 +40,7 @@
                     </a>
                 @endif
 
-                <x-jet-button class="ml-4">
+                <x-jet-button class="ml-4 ">
                     {{ __('Login') }}
                 </x-jet-button>
             </div>

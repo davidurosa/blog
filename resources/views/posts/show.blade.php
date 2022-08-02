@@ -19,9 +19,9 @@
 
             @if ($post->image)
 
-            <img class="w-full h-80 object-cover object-center" src="{{Storage::url($post->image->url)}}" alt="">
+            <img class="w-full h-80 object-cover rounded-lg object-center" src="{{Storage::url($post->image->url)}}" alt="">
             @else
-            <img class="w-full h-80 object-cover object-center" src="https://cdn.pixabay.com/photo/2020/07/08/10/17/car-5383371_960_720.jpg" alt="">
+            <img class="w-full h-80 rounded-lg object-cover object-center" src="https://cdn.pixabay.com/photo/2010/12/23/13/36/bird-4078_960_720.jpg" alt="">
 
             @endif
         </figure>
@@ -42,9 +42,9 @@
                 <a class="flex" href="{{route('posts.show',$similar)}}">
                     @if ($similar->image)
 
-                    <img class="w-36 h-20 object-cover object-center" src="{{Storage::url($similar->image->url)}}" alt="">
+                    <img class="w-36 h-20 object-cover object-center rounded-lg" src="{{Storage::url($similar->image->url)}}" alt="">
                     @else
-                    <img class="w-36 h-20 object-cover object-center" src="https://cdn.pixabay.com/photo/2020/07/08/10/17/car-5383371_960_720.jpg" alt="">
+                    <img class="w-36 h-20 object-cover object-center rounded-lg" src="https://cdn.pixabay.com/photo/2018/08/12/16/59/parrot-3601194_960_720.jpg" alt="">
 
 
                     @endif
